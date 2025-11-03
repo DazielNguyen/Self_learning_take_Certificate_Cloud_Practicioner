@@ -134,9 +134,68 @@
 * **AWS Well-Architected Tool:** A tool to review your workloads against AWS best practices.
 * **Decouple:** Separate your components.
 * **Parallelization:** Divide a job into simple forms and distribute the load (e.g., breaking down large datasets to be processed simultaneously).
+
 ---
 ## **DOMAIN 3: Cloud Technology and Services - Understand the benefits of and strategies for migration to the AWS Cloud**
+## AWS Cloud Adoption Framework (CAF)
+* **What:** Comprehensive approach for successful cloud transformation.
+* **Purpose:** Provides best practices; improves cloud readiness.
+* **6 Perspectives:**
+    * Business
+    * People
+    * Governance
+    * Platforms
+    * Security
+    * Operations
+* **Benefits:** Reduce risk, increase operational efficiency, grow new products, improve performance.
 
+---
+
+## Cloud Adoption Stages
+1.  **Project:** Evaluating AWS for specific needs.
+2.  **Foundation:** Moving first applications; building a landing zone.
+3.  **Migration:** Defining roles; establishing a Cloud Center of Excellence (CCOE).
+4.  **Reinvention:** All new projects start in AWS.
+
+---
+
+## 7 Migration Strategies (The 7 R's)
+* **Retire:** Decommission applications.
+* **Retain:** Keep applications in the source environment.
+* **Rehost (Lift and Shift):** Migrate without changes.
+* **Relocate:** Move a large number of servers.
+* **Repurchase (Drop and Shop):** Move to a different product (e.g., SaaS).
+* **Replatform (Lift, Tinker, and Shift):** Migrate with some cloud optimizations.
+* **Refactor / Re-architect:** Rebuild the application for cloud-native features.
+
+---
+
+## Migration Services & Scenarios
+
+### Scenario 1: Financial App (Low Latency, Changing Data)
+* **Good Choices:**
+    * **Amazon EFS** (Elastic File System): Scalable file storage for EC2.
+    * **Amazon RDS** (Relational Database Service): Managed relational database.
+* **Bad Choices:**
+    * **Amazon S3:** Higher latency (public zone).
+    * **AWS Snowball Edge:** For large, bulk data migration, not live access.
+
+### Scenario 2: NoSQL Database (Scalable, Fast, Reliable)
+* **Answer:** **Amazon DynamoDB**.
+* **Keywords:** NoSQL, non-relational, key-value, document database (JSON).
+
+### Scenario 3: Microsoft SQL Server (Cost-Optimized, Standard License)
+* **Answer:** Launch an **EC2 instance** using a **Windows Server AMI** bundled with **SQL Server Standard**.
+* **Reason:** You do not need to buy/manage your own license.
+* **Why Not RDS?** More expensive (it's a managed service).
+* **Why Not Aurora?** Only supports MySQL and PostgreSQL.
+
+---
+
+## Data Backups
+* **Service:** **Amazon S3 Glacier** storage classes.
+* **Use:** Lowest-cost for archiving large data.
+* **Consider:** Retrieval fees and retrieval times.
 
 
 ## **DOMAIN 4: Billing, Pricing, and Support**
