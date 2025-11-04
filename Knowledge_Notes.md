@@ -1,13 +1,13 @@
 # **CERTIFICATE CLOUD PRACTITIONER**
 ## **DOMAIN 1: Cloud Concepts - Define the benefits of the AWS Cloud**
-### 1.1 Define the benefits of the AWS Cloud 
-## What is AWS?
+## 1.1 Define the benefits of the AWS Cloud 
+### What is AWS?
 * **Definition:** World's most comprehensive cloud; 200+ services.
 * **Value:** Lower costs, become more agile, innovate faster.
 
 ---
 
-## 5 Criteria of Cloud Computing
+### 5 Criteria of Cloud Computing
 1.  **On-Demand Self-Service:** Provision resources (servers, databases) without human interaction (via console, CLI, API).
 2.  **Network Connectivity:** Access resources over the network (HTTP, VPN, SSH).
 3.  **Resource Pooling:** AWS shares large pools of resources (servers, storage) among multiple customers.
@@ -17,13 +17,13 @@
 
 ---
 
-## AWS Global Infrastructure
+### AWS Global Infrastructure
 * **Core Components:** Regions, Availability Zones (AZs), Edge Locations.
 * **Purpose:** Allows you to build resilient and **highly available** systems.
 
 ---
 
-## Availability vs. Tolerance vs. Recovery
+### Availability vs. Tolerance vs. Recovery
 * **High Availability (HA):**
     * **What:** System recovers *quickly* from a failure.
     * **Example:** An active server and a standby server. If active fails, you "failover" to standby.
@@ -37,7 +37,7 @@
 
 ---
 
-## Scaling vs. Elasticity
+### Scaling vs. Elasticity
 * **Vertical Scaling (Scale Up):**
     * **What:** Increase the size of one resource (e.g., T2.micro -> T2.medium).
     * **Pro:** Simple.
@@ -51,8 +51,8 @@
     * **How:** Uses services (like Auto Scaling) to automatically add/remove instances to match demand perfectly.
 
 ---
-## **DOMAIN 2: Security and Compliance - Identify design principles of the AWS Cloud**
-## AWS Well-Architected Framework
+## **1.2 Identify design principles of the AWS Cloud**
+### AWS Well-Architected Framework
 * **Definition:** AWS's best practices for architecting systems in the cloud.
 * **Goal:** Build reliable, secure, efficient, and cost-effective systems.
 * **Based on 6 Pillars:**
@@ -136,7 +136,7 @@
 * **Parallelization:** Divide a job into simple forms and distribute the load (e.g., breaking down large datasets to be processed simultaneously).
 
 ---
-## **DOMAIN 3: Cloud Technology and Services - Understand the benefits of and strategies for migration to the AWS Cloud**
+## **1.3 Understand the benefits of and strategies for migration to the AWS Cloud**
 ### AWS Cloud Adoption Framework (CAF)
 * **What:** Comprehensive approach for successful cloud transformation.
 * **Purpose:** Provides best practices; improves cloud readiness.
@@ -205,7 +205,7 @@
 * **Consider:** Retrieval fees and retrieval times.
 
 ---
-## **DOMAIN 4: Billing, Pricing, and Support**
+## **1.4 Billing, Pricing, and Support**
 
 ### Cloud Economics
 * Shifts technical resources **away from on-premises** infrastructure management (servers, cooling, data centers).
