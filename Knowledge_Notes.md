@@ -137,7 +137,7 @@
 
 ---
 ## **DOMAIN 3: Cloud Technology and Services - Understand the benefits of and strategies for migration to the AWS Cloud**
-## AWS Cloud Adoption Framework (CAF)
+### AWS Cloud Adoption Framework (CAF)
 * **What:** Comprehensive approach for successful cloud transformation.
 * **Purpose:** Provides best practices; improves cloud readiness.
 * **6 Perspectives:**
@@ -147,11 +147,15 @@
     * Platforms
     * Security
     * Operations
-* **Benefits:** Reduce risk, increase operational efficiency, grow new products, improve performance.
+* **Benefits:** 
+    + Reduce business risk through imporved reliability, increase performance, and enhance security. 
+    + Increase operational efficiency by reducing costs and increase productivity 
+    + Can grow by creating new productsa and services to reach new customers or new markets. 
+    + Improve performance by improving your sustainability and transparency
 
 ---
 
-## Cloud Adoption Stages
+### Cloud Adoption Stages
 1.  **Project:** Evaluating AWS for specific needs.
 2.  **Foundation:** Moving first applications; building a landing zone.
 3.  **Migration:** Defining roles; establishing a Cloud Center of Excellence (CCOE).
@@ -159,7 +163,7 @@
 
 ---
 
-## 7 Migration Strategies (The 7 R's)
+### 7 Migration Strategies (The 7 R's)
 * **Retire:** Decommission applications.
 * **Retain:** Keep applications in the source environment.
 * **Rehost (Lift and Shift):** Migrate without changes.
@@ -170,9 +174,9 @@
 
 ---
 
-## Migration Services & Scenarios
+### Migration Services & Scenarios
 
-### Scenario 1: Financial App (Low Latency, Changing Data)
+#### Scenario 1: Financial App (Low Latency, Changing Data)
 * **Good Choices:**
     * **Amazon EFS** (Elastic File System): Scalable file storage for EC2.
     * **Amazon RDS** (Relational Database Service): Managed relational database.
@@ -180,11 +184,14 @@
     * **Amazon S3:** Higher latency (public zone).
     * **AWS Snowball Edge:** For large, bulk data migration, not live access.
 
-### Scenario 2: NoSQL Database (Scalable, Fast, Reliable)
+#### Scenario 2: NoSQL Database (Scalable, Fast, Reliable)
 * **Answer:** **Amazon DynamoDB**.
 * **Keywords:** NoSQL, non-relational, key-value, document database (JSON).
 
-### Scenario 3: Microsoft SQL Server (Cost-Optimized, Standard License)
+* **Answer:** **Amazon RDS**.
+* **Keywords:** Just as relational
+
+#### Scenario 3: Microsoft SQL Server (Cost-Optimized, Standard License)
 * **Answer:** Launch an **EC2 instance** using a **Windows Server AMI** bundled with **SQL Server Standard**.
 * **Reason:** You do not need to buy/manage your own license.
 * **Why Not RDS?** More expensive (it's a managed service).
@@ -192,11 +199,37 @@
 
 ---
 
-## Data Backups
+### Data Backups
 * **Service:** **Amazon S3 Glacier** storage classes.
 * **Use:** Lowest-cost for archiving large data.
 * **Consider:** Retrieval fees and retrieval times.
 
-
+---
 ## **DOMAIN 4: Billing, Pricing, and Support**
 
+### Cloud Economics
+* Shifts technical resources **away from on-premises** infrastructure management (servers, cooling, data centers).
+* Adopts a **consumption model** (pay only for what you consume).
+* Uses AWS **economies of scale** for lower costs.
+* **Benefit:** Frees up technical resources to focus on other activities (optimizing resource utilization, creating more efficient applications, developing better end-user experience, and more areas that will help your organization streamline operations and generatin more revenue).
+
+---
+
+### Total Cost of Ownership (TCO)
+* **Key Concept:** Migrating to AWS trades **Capital Expenses (CapEx)** for **variable expenses (OpEx)**.
+
+* **Four Parts of TCO:**
+    1.  **Capital Expenses (CapEx):** Long-term purchases (buildings, servers, power backups).
+    2.  **Operational Expenses (OpEx):** Day-to-day operating costs (utilities, server maintenance).
+    3.  **Labor Costs:** Staffing for on-premises data centers (technicians).
+    4.  **Software Licensing:** How existing licenses are affected by the move.
+
+---
+
+### How to Reduce Costs
+* Stop provisioning for **peak demand**; use benchmarking and testing.
+* Use **automation**.
+* Scale **horizontally** to meet demand (instead of running at peak capacity 24/7).
+* Use **AWS Managed Services** (reduces cost of ownership and technical workload).
+* **Right-sizing** resources.
+* Data segmentation (reduces compliance scope and audit time).
