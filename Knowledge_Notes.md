@@ -233,3 +233,55 @@
 * Use **AWS Managed Services** (reduces cost of ownership and technical workload).
 * **Right-sizing** resources.
 * Data segmentation (reduces compliance scope and audit time).
+
+---
+## Domain 1
+### Bonus Question & Some Keyword to Remember
+
+
+- **AWS DMS (Database Migration Service)** is used to transpose relational databases from one location to another. Can use AWS DMS to migrate between sources, including between on premises and the cloud. However, AWS DMS does not actually transport the data.
+
+- **AWS Snowball Edge** is a device that can migrate petabyte-scale datasets at fast speed. Snowball Edge devices also have onboard compute capabilities. You can use Snowball Edge to migrate petabyte-scale datasets from on-premises to AWS in a cost-effective way.
+
+- **AWS Migration Hub** is used to plan and track the progress of migrations. Migration Hub is not used for the actual data migration.
+
+- **AWS SCT (Schema Conversion Tool)** is used to convert existing database schemas from one database engine to a different database engine. The AWS SCT is not used to migrate petabyte-scale datasets into AWS.
+
+- **AWS Well-Architected Framework:** The **Well-Architected Framework** helps cloud architects to **build secure, efficient, high-performing, and resilient infrastructures** on AWS. The Well-Architected Framework is **primarily focused** on the **technical point of view**, rather than a combination of technical and business points of view.
+
+- **AWS Control Tower** would help the company set up and govern an AWS multi-account environment that follows AWS best practices. However, AWS Control Tower does not provide guidance on moving to the AWS Cloud.
+
+- **AWS CAF (Cloud Adoption Framework)** identifies capabilities in six perspectives that support successful transitions to the AWS Cloud. The six perspectives include business, people, governance, platform, security, and operations.
+
+- **AWS Trusted Advisor:** Trusted Advisor inspects an AWS environment and makes recommendations about improvements and changes that can be made. The recommendations can help to increase security, reduce costs, and improve system performance and availability. However, Trusted Advisor does not provide guidance on how to move to the AWS Cloud.
+
+- **AWS AppSync** is a fully managed GraphQL service that is used to connect applications to data sources. AWS AppSync is not for architectural advice.
+
+- **AWS DataSync**: Can use DataSync to move data. However, DataSync does not provide the database schema management that is required in the scenario.
+
+- **AWS AppConfig** gives you the ability to create, manage, and quickly deploy application configurations. AWS AppConfig does not assist with best practices in architecture design.
+
+- **AWS WA Tool (Well-Architected Tool)** is used to improve your architecture using AWS best practices. The AWS WA Tool can provide guidance on architecture design for a new application.
+
+- **Amazon Inspector**: You can use Amazon Inspector to scan workloads for software vulnerabilities and unintended network exposure. Amazon Inspector does not provide guidance on architecture design.
+
+- **Amazon S3 File Gateway** connects on-premises software appliances to AWS Cloud storage so that you can store and retrieve objects in Amazon S3.
+
+- **AWS Direct Connect** is a network connection from your on-premises data center to the cloud. You can use Direct Connect to move data. However, Direct Connect does not provide the database schema management that is required in the scenario.
+
+- **AWS offers pay-as-you-go pricing** for more than 200 cloud services. Pay-as-you-go pricing requires no upfront payments, and you only pay for what you use.
+
+- **Reserved Instance** pricing is available with no upfront payments. However, the pricing is a fixed model based on the reserved capacity. Reserved Instance pricing is not variable based on usage.
+
+- **Rightsize Instances:** To rightsize might reduce costs. However, this solution does not address the requirement for no upfront payments.
+
+- **Operational Excellence**: The principle to perform operations as code is a design principle of the operational excellence pillar. By performing operations as code, you limit human error and enable consistent responses to events.
+
+- **Elasticicty:** The AWS Cloud gives you the ability to stop planning capacity and let it automatically scale up when needed and scale down as demand goes down. This elasticity could stop you from having underutilized resources.
+
+- **Loose coupling**: Loose coupling, or decoupling, refers to the design principle of separating resources in the design architecture. Decoupling your architecture prevents your entire system from failing if one component fails.
+
+- **Anticipate failure**: Anticipate failure is a principle of the operational excellence pillar of the Well-Architected Framework. To anticipate failure, you can perform test exercises to **identify potential sources of failure**.
+
+---
+## **DOMAIN 2: Security and Compliance**
