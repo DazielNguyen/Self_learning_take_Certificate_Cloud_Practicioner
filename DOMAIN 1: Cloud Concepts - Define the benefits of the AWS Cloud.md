@@ -284,4 +284,5 @@
 - **Anticipate failure**: Anticipate failure is a principle of the operational excellence pillar of the Well-Architected Framework. To anticipate failure, you can perform test exercises to **identify potential sources of failure**.
 
 ---
-## **DOMAIN 2: Security and Compliance**
+
+
