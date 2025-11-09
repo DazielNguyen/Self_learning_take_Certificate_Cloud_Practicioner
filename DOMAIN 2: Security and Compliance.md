@@ -69,5 +69,77 @@
 - **Core Principle:** **Least-Privileged Access** (only give users the minimum permissions they need).
 
 ## 2.3 Identify AWS access management capabilities 
+### Fundamentals
+- Why do you need to control user access?
+- How to control access to your AWS account.
+- What is an AWS account. 
+### Access Management Concepts
+- **Why:** Control who can access what.
+- **Principle of Least Privilege:** Give users only the exact permissions needed for their job, and nothing more.
+### AWS Account root user
+- Know how to secure your account root user and tasks required of your root user acount
+    + Change account setting
+    + Restore IAM User permissions
+    + Activate IAM access to the Billing and Management console 
+    + View tax invoices
+    + Close your AWS account
+    + Register as a seller
+    + Configure S3 with MFA
+    + Edit or delete S3 bucket policies
+    + Sign up for AWS GovCloud 
+    + Request AWS GovCloud account root user access keys
+### AWS Account & Root User
+- **AWS Account:** Container for your resources; where usage is billed.
+- **Root User:**
+    + The initial identity created with the account.
+    + Has **complete, unrestricted access**.
+    + **Do NOT** use for daily tasks.
+- **Root User Best Practices:**
+    + Use **Multi-Factor Authentication (MFA)**.
+    + Rotate access keys and password.
+    + Use an **admin user** (from IAM) for daily work.
+- **Root User Tasks (Examples):**
+    + Change account settings.
+    + Restore IAM user permissions.
+    + Activate IAM access to the Billing console.
 
+### AWS IAM (Identity and Access Management)
+- **IAM Users:**
+    + An identity with long-term credentials (password, access keys).
+    + Can enable MFA.
+    + Can enforce password policies (complexity, rotation).
+- **IAM Groups:**
+    + A collection of IAM users.
+    + Permissions are applied to the group, not individual users.
+- **IAM Roles:**
+    + An identity with **temporary credentials**.
+    + **Assumed** by entities (users, services, other accounts).
+    + **Use Cases:**
+        + Granting temporary access to users.
+        + **Cross-account access**.
+        + Giving AWS services permission to act on your behalf (e.g., EC2 writing to S3).
+- **IAM policies:**
+    + Policiy types
+    + IAM Policy Simulator
+- **IAM integration** with other AWS services
+
+### Amazon Cognito
+- **Cognito User Pool:** A user directory (handles sign-up/sign-in).
+- **Cognito Identity Pool:** Provides **temporary AWS credentials** for users (including social media logins or unauthenticated guests).
+
+### IAM Policies
+* **Managed Policies:** Created and managed by **AWS**.
+* **Unmanaged (Inline) Policies:** Created and managed by **You** (customer).
+* **IAM Policy Simulator:** A tool to **test and troubleshoot** policies.
+
+### Resource-Based Policies (Example: S3)
+* **Bucket Policy (S3):**
+    * A **resource-based policy** attached directly to the S3 bucket.
+    * Grants permission to other AWS accounts or IAM users.
+* **User Policy:**
+    * An **identity-based policy** attached to an IAM user/role to grant them access to S3.
+* **MFA Delete:**
+    * Prevents accidental object deletion.
+    * Requires a user to authenticate with MFA to delete an object.
+    * Requires **Versioning** to be enabled first.
 ## 2.4 Indentify components and resources for security
