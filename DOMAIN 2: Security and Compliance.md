@@ -143,3 +143,36 @@
     * Requires a user to authenticate with MFA to delete an object.
     * Requires **Versioning** to be enabled first.
 ## 2.4 Indentify components and resources for security
+## Network Security
+
+### Security Groups (SG)
+- Secures: **Resources** (e.g., EC2, RDS) at the Elastic Network Interface (ENI) level.
+- State: **Stateful** (If traffic is allowed in, it is automatically allowed out).
+- Rules: **Allow** rules only.
+- Deny: **Implicit Deny** (Cannot create explicit deny rules).
+- Source/Destination: IP addresses or other **Security Group IDs**.
+
+### Network Access Control Lists (NACL)
+- Secures: **Subnets** (controls traffic *entering/leaving* the subnet).
+- State: **Stateless** (Must create separate **inbound** and **outbound** rules).
+- Rules: Can create **Allow** and **Explicit Deny** rules.
+- Internal Traffic: Does **not** control traffic *within* the same subnet.
+
+## Other Security Services
+- **AWS WAF (Web Application Firewall):**
+    + Filters: **Web traffic** based on IP, HTTP headers, URLs.
+    + Blocks: Common attacks (e.g., **SQL injection**, **cross-site scripting**).
+- **Penetration Testing:**
+    + **Yes**, but only for certain services (others require approval).
+- **AWS Trusted Advisor / Amazon Inspector:**
+    + Provide security **recommendations**.
+
+## Resources & Third-Party Tools
+- **AWS Marketplace:**
+    + Find and deploy **third-party software** and tools.
+- **Security Information Resources:**
+    + AWS Knowledge Center
+    + AWS Security Center
+    + AWS Security Blogs / Forums
+    + AWS Whitepapers (for deep dives)
+    + Official Documentation
