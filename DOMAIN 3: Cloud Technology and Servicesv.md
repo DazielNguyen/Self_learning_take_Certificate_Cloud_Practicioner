@@ -341,5 +341,58 @@
 
 
 ---
-## **3.7 Identify AWS storage resources**
+## **3.7 Identify AWS artificial intelligence and machine learning services and analytics services**
 ---
+
+### AI/ML Fundamentals
+* **Machine Learning (ML):** Computers find patterns in data to make predictions.
+* **Artificial Intelligence (AI):** Computer science solving human cognitive problems (learning, problem-solving).
+
+
+### 3 Levels of AWS ML
+1.  **AI Services:** Pre-trained models (use via API).
+2.  **ML Services:** Build, train, and deploy your *own* models.
+3.  **ML Frameworks:** Infrastructure (EC2, AMIs) for open-source frameworks.
+
+#### 1. AI Services (Pre-trained)
+* **Amazon Translate:** Translates text.
+* **Amazon Transcribe:** Speech-to-text
+* **Amazon Polly:** Text-to-speech.
+* **Amazon Lex:** Build chatbots.
+* **Amazon Rekognition:** Image and video analysis (identifies objects, people, text).
+
+#### 2. ML Services (Build/Train)
+* **Amazon SageMaker:** **Main service** to build, train, and deploy ML models at scale.
+* **Amazon CodeWhisperer:** ML-powered code recommendations.
+
+#### 3. ML Frameworks & Infrastructure
+* **Frameworks:** TensorFlow, PyTorch, MXNet.
+* **Infrastructure:** Deep Learning AMIs, EC2 P3 instances.
+
+### Data Analytics
+* **Definition:** Converts raw data into actionable insights.
+
+### Key Analytics Services
+* **Amazon Athena:**
+    * **Serverless** interactive query service.
+    * Uses standard **SQL** to analyze data directly in **S3**.
+    * Pay per query.
+* **Amazon Macie:**
+    * **Security** service; uses ML to detect
+    * Discovers, classifies, and protects sensitive data (**PII**) in S3.
+* **Amazon Redshift:**
+    * Petabyte-scale **data warehouse**.
+    * **Column-based** database.
+    * **OLAP** (Online Analytical Processing).
+    * **Redshift Spectrum:** Queries data in S3 (requires a Redshift cluster).
+* **Amazon Kinesis:**
+    * Ingests and processes **real-time** streaming data (video, logs, clickstreams).
+* **AWS Glue:**
+    * **Serverless data integration** service.
+    * Used for **ETL** (Extract, Transform, Load) jobs.
+* **Amazon QuickSight:**
+    * Business Intelligence (BI) service.
+    * Creates and publishes interactive **dashboards**.
+* **Amazon EMR (Elastic MapReduce):**
+    * Big data platform.
+    * Processes vast data using **Hadoop** and **Spark**.
