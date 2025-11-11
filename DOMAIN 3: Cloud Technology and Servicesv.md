@@ -396,3 +396,58 @@
 * **Amazon EMR (Elastic MapReduce):**
     * Big data platform.
     * Processes vast data using **Hadoop** and **Spark**.
+
+---
+## **3.8 Identify services from other in-scope AWS service categories**
+---
+
+### Monitoring & Observability
+* **Amazon CloudWatch:** Collects **Metrics**, **Logs**; create **Dashboards** and **Alarms**.
+* **AWS X-Ray:** Observe and trace systems.
+* **Amazon EventBridge:** Respond to changes; trigger automated actions.
+
+### Application Integration
+* **Goal:** **Decouple** components (allow services to operate independently).
+
+#### Amazon SQS (Simple Queue Service)
+* **What:** Managed message queue service (**asynchronous**).
+* **Polling:**
+    * **Short Polling:** Immediate check; many API calls.
+    * **Long Polling:** Waits (e.g., `WaitTimeSeconds`); fewer, more efficient API calls.
+* **Queue Types:**
+    * **Standard:** Best-effort ordering. **At-least-once** delivery (duplicates possible).
+    * **FIFO (First-In, First-Out):** Guaranteed ordering. **Exactly-once** delivery (no duplicates).
+
+#### Amazon SNS (Simple Notification Service)
+* **What:** **Pub/Sub** (Publish/Subscribe) messaging.
+* **Use:** Coordinates sending/delivery of messages.
+* **Example:** Send notifications from CloudWatch alarms or Auto Scaling events.
+
+### Business & Customer Services
+* **Amazon Connect:** Cloud **contact center** (voice/chat).
+* **Amazon SES (Simple Email Service):** Send and receive **email** at scale.
+* **AWS Activate:** Provides resources, tools, and credits for **startups**.
+* **AWS IQ:** Connects you to **AWS certified experts** for project help.
+* **AWS Managed Services:** Infrastructure operations management for enterprises.
+* **AWS Support:** Technical support plans.
+
+### Developer & DevOps Tools
+* **AWS CodeCommit:** Managed **Git** repository (source control).
+* **AWS CodeBuild:** Compiles source code, runs tests.
+* **AWS CodeDeploy:** Automates application deployments.
+* **AWS CodePipeline:** CI/CD (Continuous Integration/Delivery) service.
+* **AWS Cloud9:** Cloud-based IDE (Integrated Development Environment).
+* **AWS CloudShell:** Browser-based shell.
+
+### End-User Computing
+* **Amazon AppStream 2.0:** Stream desktop **applications** to users.
+* **Amazon WorkSpaces:** Virtual cloud **desktops** (Windows/Linux).
+* **Amazon WorkSpaces Web:** Secure browser access to internal websites.
+
+### Front-End Web & Mobile
+* **AWS Amplify:** Build, ship, and host full-stack web/mobile apps.
+* **AWS AppSync:** Managed **GraphQL** interface for applications.
+
+### IoT (Internet of Things)
+* **AWS IoT Core:** Securely connect and manage IoT devices.
+* **AWS IoT Greengrass:** Extends cloud capabilities to **local devices** (run code/analytics at the edge).
