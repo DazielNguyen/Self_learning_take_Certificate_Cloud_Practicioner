@@ -77,3 +77,64 @@
 ### Key Concepts
 * **Availability Zones (AZs) = High Availability (HA)**.
 * **Regions = Disaster Recovery (DR) & Compliance**.
+
+---
+## **3.3 Identify AWS compute resources**
+---
+
+### Amazon EC2 (Elastic Compute Cloud)
+* **Definition:** Virtualization as a Service (IaaS).
+* **Architecture:**
+    * **EC2 Instances:** Virtual machines.
+    * **EC2 Hosts:** Physical servers (managed by AWS).
+    * **Shared Hosts:** Default. Shared hardware, but instances are isolated.
+    * **Dedicated Hosts:** Pay for the entire physical host.
+* **Resilience:** **Availability Zone resilient**. (Fails if the AZ fails).
+
+### EC2 Storage
+* **Instance Store:**
+    * **Temporary** storage physically attached to the host.
+    * Data is **lost** if the instance stops, terminates, or moves.
+* **EBS (Elastic Block Store):**
+    * **Persistent** network-attached storage.
+    * **Resilience:** Availability Zone resilient (EBS volume and EC2 instance must be in the same AZ).
+
+### EC2 Instance Types (Categories)
+* **General Purpose:** Balanced CPU, memory, storage (default).
+* **Compute Optimized:** High-performance CPU (media, ML, gaming).
+* **Memory Optimized:** Large datasets in memory (databases).
+* **Accelerated Computing:** Hardware accelerators (GPUs, FPGAs).
+* **Storage Optimized:** High I/O, data warehousing.
+* **Burstable Instances:** Low baseline CPU with "burst credits" for spikes.
+
+### EC2 Configuration
+* **AMI (Amazon Machine Image):**
+    * Template for launching an instance.
+    * **Golden AMI:** A custom, pre-configured AMI (e.g., with security patches, software).
+* **Instance Metadata:**
+    * **Data *about* your instance** (Instance ID, IP address, etc.).
+    * Accessed via: `http://169.254.169.254/latest/meta-data`
+* **Instance User Data:**
+    * Scripts run *after* the instance starts (for automated configuration).
+
+### Containers
+* **Concept:** Runs as a process *within* the host OS (shares the OS).
+* **vs. EC2:** Containers are more lightweight (no guest OS) than EC2 instances (full VM).
+* **Services:**
+    * **ECS (Elastic Container Service):** AWS-managed container orchestration.
+    * **EKS (Elastic Kubernetes Service):** AWS-managed Kubernetes.
+
+### Serverless Compute
+* **AWS Lambda (FaaS - Function as a Service):**
+    * Run small pieces of code (functions) without managing servers.
+    * **Event-driven** (e.g., triggers on an S3 upload).
+    * Billed for execution duration.
+
+### High Availability & Scalability
+* **Auto Scaling Groups:**
+    * Automatically adds (scales out) or removes (scales in) EC2 instances to meet demand.
+    * Provides **elasticity**.
+* **ELB (Elastic Load Balancing):**
+    * Distributes incoming traffic across multiple instances/AZs.
+    * **Types:** Classic (CLB), Application (ALB), Network (NLB), Gateway (GWLB).
+    * **HA:** Places a node in each AZ it serves.
