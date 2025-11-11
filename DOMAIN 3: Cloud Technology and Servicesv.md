@@ -1,5 +1,6 @@
 # **CERTIFICATE CLOUD PRACTITIONER**
 ## **DOMAIN 3: Cloud Technology and Services**
+---
 ## **3.1 Define methods of deploying and operating in the AWS Cloud**
 
 ### Methods of Deploying & Operating
@@ -34,4 +35,45 @@
 * **AWS Direct Connect:** **Private, dedicated connection** to AWS.
 * **Internet Gateway:** Allows communication between instances in a VPC and the public internet.
 
-## **3.2 Define methods of deploying and operating in the AWS Cloud**
+--- 
+## **3.2 Define the AWS global infrastructure**
+---
+
+### Service Resilience
+* **Globally Resilient:** Replicates across Regions. Region can fail, service is OK.
+    * *Examples:* IAM, CloudFront, Route 53.
+* **Regionally Resilient:** Replicates across AZs (in one Region). AZ can fail, service is OK.
+    * *Examples:* EFS, AWS Batch.
+* **Zonal Resilient:** Runs in a *single* AZ. AZ fails, service fails.
+    * *Examples:* EBS, EC2.
+
+### AWS Global Infrastructure
+* **Region:**
+    * A geographical area with **2+ Availability Zones**.
+    * Data stays in the Region (unless you move it).
+    * *Selection Criteria:* **Compliance** and **Latency** (proximity to users).
+* **Availability Zone (AZ):**
+    * **One or more** discrete data centers (isolated power, networking).
+    * Connected via high-speed, redundant networking.
+    * *Use Case:* **High Availability** (distribute resources across AZs).
+* **Edge Location:**
+    * Global endpoint for **caching content**.
+    * Used by the CDN (Content Delivery Network).
+
+### Region Extensions
+* **Local Zones:** Extension of a Region, close to users.
+* **AWS Wavelength:** Extension of a Region at a **carrier location** (for mobile/5G ultra-low latency).
+
+### Edge Services: CloudFront vs. Global Accelerator
+* **Both:** Use the AWS Global Network and Edge Locations; integrate with AWS Shield (DDoS).
+* **Amazon CloudFront (CDN):**
+    * **Caches** content (static & dynamic).
+    * Serves content *from* the edge.
+* **AWS Global Accelerator:**
+    * **No caching**.
+    * Improves **TCP/UDP** performance (proxies packets).
+    * Provides a **static IP** and fast regional failover.
+
+### Key Concepts
+* **Availability Zones (AZs) = High Availability (HA)**.
+* **Regions = Disaster Recovery (DR) & Compliance**.
