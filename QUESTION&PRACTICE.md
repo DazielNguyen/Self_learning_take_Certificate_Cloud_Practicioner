@@ -80,7 +80,7 @@
     + A company has a new requirement to log actions taken in a production account.
 
 - **AWS IAM Identity Center** 
-    + Provides you with the ability to** manage sign-in securit**y for your workforce users. 
+    + Provides you with the ability to **manage sign-in security** for your workforce users. 
     + IAM Identity Center can be used for **SSO integration** to access the AWS Management Console.
     + Service should someone use to turn on single sign-on (SSO) to the AWS Management Console
 
@@ -183,3 +183,5 @@ Repurchase, also known as drop-and-shop, is for applications with a different ve
 > Can you conduct security assessments and penetration testing without prior approval against your AWS resources? 
 
 **Yes, but only for certain services.**
+
+Bài tập của bạn sẽ được đánh giá dựa trên sự rõ ràng, tính khả thi và mức độ toàn diện của kế hoạch chuyển đổi số. Người đánh giá ngang hàng sẽ xem xét cách bạn giải quyết kịch bản, kết hợp các khái niệm từ khoá học (ví dụ: tổ chức linh hoạt, cấp độ trưởng thành số và chiến lược bền vững) và đề xuất các giải pháp có thể thực hiện. Kế hoạch của bạn cần bao gồm một tuyên bố vấn đề rõ ràng, các chiến lược đề xuất, các bước triển khai và kết quả mong đợi. Bạn cũng sẽ được đánh giá dựa trên sự tổ chức và mạch lạc của bài viết.
