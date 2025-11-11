@@ -273,3 +273,73 @@
 * **Edge Services:**
     * **CloudFront:** Caches content.
     * **Global Accelerator:** Improves TCP/UDP performance (non-cached).
+
+---
+## **3.6 Identify AWS storage resources**
+---
+
+### Cloud Storage Types
+* **Object Storage:** Stores data as objects (e.g., **Amazon S3**).
+* **File Storage:** Stores data in a file system hierarchy (e.g., **Amazon EFS**, **Amazon FSx**).
+* **Block Storage:** Stores data as blocks (e.g., **Amazon EBS**).
+
+### Object Storage: Amazon S3
+* **What:** Global, public, object storage service.
+* **Buckets:** Containers for objects; must have a **globally unique name**.
+* **Objects:** Files (0 bytes - 5 TB).
+* **Key Feature: S3 Versioning:**
+    * Keeps multiple versions of an object.
+    * Protects against accidental overwrites or deletes.
+* **Storage Classes (Example):**
+    * **S3 Glacier Deep Archive:** Lowest cost, long-term archive, retrieval within 12 hours.
+
+### File Storage: EFS vs. FSx
+* **Amazon EFS (Elastic File System):**
+    * Keyword: **Linux**.
+    * Managed, shared file system for **Linux** EC2 instances.
+* **Amazon FSx for Windows File Server:**
+    * Keyword: **Windows**.
+    * Managed, shared file system for **Windows** (supports SMB, NTFS).
+* **Amazon FSx for Lustre:**
+    * Keywords: **Linux + Cluster**.
+    * For **High-Performance Computing (HPC)**, ML, and video processing.
+
+### Block Storage: EBS vs. Instance Store
+* **Instance Store:**
+    * **Ephemeral** (temporary) storage, physically attached to the host.
+    * Fast, but **data is lost** if the EC2 instance stops or fails.
+* **EBS (Elastic Block Store):**
+    * **Persistent** network-attached storage (like a virtual hard drive).
+    * Resilient; data is separate from the EC2 host.
+    * Can be a **boot volume**.
+
+### EBS Volume Types
+* **General Purpose SSD (gp2/gp3):**
+    * Recommended for most workloads.
+    * **Can** be a boot volume.
+* **Provisioned IOPS SSD (io1/io2):**
+    * Critical apps, large databases (sustained IOPS).
+* **Throughput Optimized HDD (st1):**
+    * Streaming, big data.
+    * **Cannot** be a boot volume.
+* **Cold HDD (sc1):**
+    * Infrequently accessed, lowest cost.
+    * **Cannot** be a boot volume.
+* **EBS Snapshots:** Point-in-time backups of EBS volumes.
+
+### Hybrid Storage: AWS Storage Gateway
+* **What:** Connects on-premises storage to AWS.
+* **File Gateway:** Stores files as S3 objects; provides a local cache.
+* **Volume Gateway (iSCSI):**
+    * **Gateway Stored:** Full data on-premises, backups (snapshots) to S3.
+    * **Gateway Cached:** Primary data in S3, hot data cached on-premises.
+* **Virtual Tape Library (VTL) Gateway:** Replaces physical tapes (backup to S3/Glacier).
+
+### Backup
+* **Amazon S3:** Low-cost, durable storage for backups (use **Lifecycle Management**).
+* **AWS Backup:** Centralized, automated service to manage backups across AWS.
+
+
+---
+## **3.7 Identify AWS storage resources**
+---
