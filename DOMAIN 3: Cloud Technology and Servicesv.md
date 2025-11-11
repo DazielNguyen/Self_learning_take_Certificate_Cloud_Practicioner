@@ -204,3 +204,72 @@
 * **AWS DataSync:**
     * **What:** Fast, **online data transfer**.
     * **Use:** Moves data from on-premises to S3, EFS, or FSx.
+
+---
+## **3.5 Identify AWS network resources**
+---
+
+### Amazon VPC (Virtual Private Cloud)
+* **What:** Your own **private data center** in the cloud.
+* **Control:** You choose IP ranges, create **subnets**, configure **route tables**.
+* **Resilience:** A **Regional service** (spans multiple AZs).
+
+### VPC Types
+* **Default VPC:**
+    * Created by AWS in each Region.
+    * **Public by default**.
+    * Has a default subnet in each AZ.
+* **Custom VPC:**
+    * You create and configure.
+    * **Private by default**.
+
+### VPC Core Components
+* **Subnets:**
+    * A sub-section of a VPC's IP range.
+    * **Tied to a single Availability Zone (AZ)**.
+* **VPC Router:**
+    * AWS-managed router that routes traffic *between* subnets.
+* **Route Tables:**
+    * Control where the VPC router sends traffic.
+    * You associate a route table with a subnet.
+
+### VPC Security
+* **Network ACLs (NACLs):**
+    * **Subnet** level firewall.
+    * **Stateless:** Must create separate inbound *and* outbound rules.
+    * Supports **Allow** and **Deny** rules.
+* **Security Groups (SGs):**
+    * **Resource** level (EC2, RDS) firewall.
+    * **Stateful:** If traffic is allowed in, it's automatically allowed out.
+    * Supports **Allow** rules only (implicit deny).
+
+### VPC Gateways
+* **Internet Gateway (IGW):**
+    * Regional, highly available.
+    * Allows **public subnets** to access the internet.
+    * Performs 1:1 Static **NAT** (maps private IP to public IP).
+* **NAT Gateway:**
+    * **Network Address Translation**.
+    * Allows instances in **private subnets** to access the internet (e.g., for software updates).
+    * **Prevents** the internet from initiating connections *in*.
+
+### VPC & Hybrid Connectivity
+* **VPC Peering:**
+    * Links two VPCs (same or different accounts/regions) to communicate using private IPs.
+* **VPC Endpoints:**
+    * Connects your VPC to AWS public services (like S3, DynamoDB) *privately*, without an IGW or NAT Gateway.
+    * **Gateway Endpoint:** For S3 & DynamoDB.
+    * **Interface Endpoint (AWS PrivateLink):** For most other services; uses an ENI.
+* **AWS VPN:**
+    * A **virtual, encrypted** connection over the **public internet**.
+* **AWS Direct Connect:**
+    * A **dedicated, physical** fiber connection (not over the internet).
+
+### DNS & Routing
+* **Amazon Route 53:**
+    * **Globally resilient** managed **DNS** service.
+    * Use for: Domain registration, hosting zones (translating names to IPs).
+    * Provides routing policies (failover, weighted, latency).
+* **Edge Services:**
+    * **CloudFront:** Caches content.
+    * **Global Accelerator:** Improves TCP/UDP performance (non-cached).
