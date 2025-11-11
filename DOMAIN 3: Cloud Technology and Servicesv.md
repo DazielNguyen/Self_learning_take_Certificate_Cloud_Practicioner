@@ -138,3 +138,69 @@
     * Distributes incoming traffic across multiple instances/AZs.
     * **Types:** Classic (CLB), Application (ALB), Network (NLB), Gateway (GWLB).
     * **HA:** Places a node in each AZ it serves.
+
+---
+## **3.4 Identify AWS compute resources**
+---
+
+### Amazon RDS (Relational Database Service)
+* **What:** Managed database service (Database as a Service).
+* **Engines:** MySQL, MariaDB, PostgreSQL, Oracle, Microsoft SQL Server, Aurora.
+* **Storage:** Dedicated storage per instance.
+* **Single-AZ:** Instance and storage in one AZ (vulnerable to failure).
+* **Multi-AZ:**
+    * **Standby replica** in a different AZ.
+    * **Synchronous Replication** (high availability).
+* **Read Replicas:**
+    * Read-only copy for performance.
+    * **Asynchronous Replication**.
+
+### Amazon Aurora
+* **What:** Managed database compatible with MySQL & PostgreSQL.
+* **Architecture:** **Cluster** (1 primary, 0+ read replicas).
+* **Storage:** **Shared cluster volume** (faster, more available).
+* **Aurora Serverless:**
+    * No instances to manage.
+    * Scales using **ACUs** (Aurora Capacity Units).
+    * Can pause (go to 0 ACUs) to save cost (pay only for storage).
+* **Global Databases:**
+    * Replicates data globally (< 1 second) across Regions.
+    * Used for Disaster Recovery (DR) and low-latency global reads.
+
+### Amazon DynamoDB
+* **What:** Managed **NoSQL** database (key-value, document).
+* **Service Type:** **Public service**.
+* **Scaling:**
+    * **Provisioned Capacity:** You set read/write capacity.
+    * **On-Demand:** AWS handles scaling for you.
+* **Resilience:** Highly resilient (multi-AZ) by default; **Global Tables** for cross-Region.
+
+### In-Memory Databases
+* **Amazon ElastiCache:**
+    * **What:** Managed in-memory cache.
+    * **Engines:** **Redis**, **memcacheD**.
+    * **Use Cases:** Improve read performance, store user **session states**.
+* **Amazon DynamoDB Accelerator (DAX):**
+    * **What:** In-memory cache **specifically for DynamoDB**.
+    * **Speed:** **Microsecond** latency (vs. millisecond for DynamoDB).
+    * **Reads:** **Eventually consistent** (not strongly consistent).
+
+### Amazon Redshift
+* **What:** Petabyte-scale **data warehouse**.
+* **Type:** **OLAP** (Online Analytical Processing).
+* **Storage:** **Column-based** (good for analytic queries).
+* **NOT for:** OLTP (Online Transaction Processing).
+* **Redshift Spectrum:** Query data directly in **Amazon S3**.
+
+### Database Migration
+* **AWS Snow Family (Physical Devices):**
+    * **Snowcone:** ~8 TB.
+    * **Snowball Edge:** Terabytes to Petabytes (has **Storage** and **Compute** options).
+    * **Snowmobile:** Petabytes to Exabytes (shipping container).
+* **AWS DMS (Database Migration Service):**
+    * **What:** Managed service to migrate databases (replicates data).
+    * **Downtime:** Very low.
+    * **Schema Conversion Tool (SCT):** Helps move between *different* database engines.
+* **AWS DataSync:**
+    * **What:** Fast, **online data transfer**.
+    * **Use:** Moves data from on-premises to S3, EFS, or FSx.
