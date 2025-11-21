@@ -1,5 +1,5 @@
-## **Bonus Question & Some Keyword to Remember**
-### **Domain 1**
+# **Bonus Question & Some Keyword to Remember**
+## **Domain 1**
 - **AWS DMS (Database Migration Service)** is used to transpose relational databases from one location to another. Can use AWS DMS to migrate between sources, including between on premises and the cloud. However, AWS DMS does not actually transport the data.
 
 - **AWS Snowball Edge** is a device that can migrate petabyte-scale datasets at fast speed. Snowball Edge devices also have onboard compute capabilities. You can use Snowball Edge to migrate petabyte-scale datasets from on-premises to AWS in a cost-effective way.
@@ -44,7 +44,10 @@
 
 - **Anticipate failure**: Anticipate failure is a principle of the operational excellence pillar of the Well-Architected Framework. To anticipate failure, you can perform test exercises to **identify potential sources of failure**.
 
-### **Domain 2**
+---
+## **Domain 2**
+---
+
 - **Network ACLs** 
     + Used to allow or deny specific traffic to a VPC at the subnet level. Network ACLs operate at the subnet level and meet the requirements to add a layer of security that acts as a firewall.
     + A company wants to add a virtual firewall to an Amazon VPC -> wants all instances inside a specific subnet to be automatically covered under this firewall.
@@ -94,14 +97,15 @@
 - **Data encryption**
     + Many AWS services support data encryption, including Amazon Elastic Block Store (Amazon EBS) and Amazon S3. Encryption adds another layer of security to your data.
 
-
-
-
-
+---
+## **Domain 3**
+---
 
 ---
-## **Flashcard**
-### **Domain 1**
+# **Flashcard**
+---
+## **Domain 1**
+---
 > What are the 5 criteria of cloud computing?
 
 **On-demand self-service, network connectivity, resource pooling, elasticity, and that resource usage must be monitored and billed.**
@@ -151,7 +155,10 @@ Repurchase, also known as drop-and-shop, is for applications with a different ve
 
 **Yes.**
 
-### **Domain 2**
+---
+## **Domain 2**
+---
+
 > You are hosting a MySQL database on Amazon RDS. Are you responsible for patching the database engine on an Amazon RDS database instance or is AWS responsible for this security patching? 
 
 **AWS is responsible for patching on Amazon RDS.**
@@ -184,4 +191,86 @@ Repurchase, also known as drop-and-shop, is for applications with a different ve
 
 **Yes, but only for certain services.**
 
-Bài tập của bạn sẽ được đánh giá dựa trên sự rõ ràng, tính khả thi và mức độ toàn diện của kế hoạch chuyển đổi số. Người đánh giá ngang hàng sẽ xem xét cách bạn giải quyết kịch bản, kết hợp các khái niệm từ khoá học (ví dụ: tổ chức linh hoạt, cấp độ trưởng thành số và chiến lược bền vững) và đề xuất các giải pháp có thể thực hiện. Kế hoạch của bạn cần bao gồm một tuyên bố vấn đề rõ ràng, các chiến lược đề xuất, các bước triển khai và kết quả mong đợi. Bạn cũng sẽ được đánh giá dựa trên sự tổ chức và mạch lạc của bài viết.
+---
+## **Domain 3**
+---
+
+> What are benefits in accessing a service such as Amazon S3 from the console or running the commands in the AWS CLI? 
+
+**Using aws s3 commands in the AWS CLI helps to manage S3 objects.**
+
+> What do you use to connect public Amazon EC2 instances in a public subnet to the public internet? 
+
+**Internet Gateway**
+
+> If you needed to use your existing server-bound software licenses, would you choose a dedicated host or shared host? 
+
+**A dedicated host.**
+
+> Are Amazon EC2 instances an Availability Zone resilient service or a Regional resilient service? 
+
+**Amazon EC2 instances are an Availability Zone resilient service.**
+
+> What is the local storage of an Amazon EC2 instance? 
+
+**Instance Store**
+
+> What type of storage would you choose if you needed persistent storage for your Amazon EC2 instance? 
+
+**Amazon Elastic Block Store (Amazon EBS)**
+
+> Where would you check to find the Amazon EC2 instance ID, instance profile permissions, and kernel information? 
+
+**You can get the instance ID, public keys, public IP address, and other information from the instance metadata using http://169.254.169.254/latest/meta-data/.**
+
+> Which AWS Snow Family service would you choose to transfer *hundreds of petabytes* of data and *exabyte* scale data sets into AWS? 
+
+**AWS Snowmobile.**
+
+> Is an Amazon Virtual Private Cloud (Amazon VPC) a globally resilient service or a Regional resilient service?
+
+**Amazon VPC is a regional resilient service.**
+
+> Are network access control lists (network ACLs) stateful or stateless? 
+
+**Network ACLs are stateless.**
+
+> Are security groups stateful or stateless? 
+
+**Security groups are stateful**
+
+> Can you use a NAT gateway in a private subnet? 
+
+**No, NAT gateways sit in a public subnet to allow private resources access to the internet or the AWS public zones.**
+
+> What type of storage does ***Amazon S3 offer***? Block, file, or object? 
+
+**Object storage.**
+
+> What type of storage does ***Amazon EBS offer***? Block, file, or object?
+
+**Block storage.**
+
+> What type of storage does ***Amazon EFS offer***? Block, file, or object? 
+
+**File Storage**
+
+> What type of level service is Amazon Rekogintion? 
+
+**Amazon Rekognition is an artificial intelligence (AI) service level.**
+
+> What type of level service is Amazon Sagemaker? 
+
+**Amazon Sagemaker is a machine learning service level.**
+
+> What AWS analytic service can help you identify personable identifiable information (PII)? 
+
+**Amazon Macie.**
+
+> What AWS analytic service is a query service?
+
+**Amazon Athena**
+
+> Which AWS service would you use for inter-process and services messaging? 
+
+**Amazon SQS**
