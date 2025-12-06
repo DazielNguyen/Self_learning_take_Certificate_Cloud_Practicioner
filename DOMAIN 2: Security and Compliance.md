@@ -3,7 +3,7 @@
 ## 2.1 Understand the AWS shared responsibility model
 ## AWS Shared Responsibility Model
 
-![orca-blog-what-is-shared-responsibility-model-image-2]()
+![orca-blog-what-is-shared-responsibility-model-image-2](https://github.com/DazielNguyen/Self_learning_take_Certificate_Cloud_Practicioner/blob/main/orca-blog-what-is-shared-responsibility-model-image-2.webp)
 
 - **AWS Responsibility:** Security **OF** the Cloud.
 - **Customer Responsibility:** Security **IN** the Cloud.
